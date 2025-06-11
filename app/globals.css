@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Nueva Paleta Profesional - Tema Oscuro por Defecto */
+    --background: hsl(222, 47%, 11%); /* Azul muy oscuro, casi negro */
+    --foreground: hsl(210, 40%, 98%); /* Blanco brillante */
+    --card: hsl(222, 47%, 14%); /* Azul oscuro, ligeramente más claro que el fondo */
+    --card-foreground: hsl(210, 40%, 98%);
+    --popover: hsl(222, 47%, 11%);
+    --popover-foreground: hsl(210, 40%, 98%);
+    --primary: hsl(207, 90%, 54%); /* Azul moderno y brillante */
+    --primary-foreground: hsl(0, 0%, 100%); /* Blanco puro */
+    --secondary: hsl(217, 33%, 25%); /* Gris azulado oscuro */
+    --secondary-foreground: hsl(210, 40%, 90%);
+    --muted: hsl(217, 33%, 18%); /* Gris azulado aún más oscuro */
+    --muted-foreground: hsl(215, 20%, 65%);
+    --accent: hsl(207, 90%, 60%); /* Azul ligeramente más claro para acentos/hover */
+    --accent-foreground: hsl(0, 0%, 100%);
+    --destructive: hsl(0, 70%, 55%); /* Rojo (mantener estándar) */
+    --destructive-foreground: hsl(0, 0%, 98%);
+    --border: hsl(217, 33%, 22%); /* Borde sutil */
+    --input: hsl(217, 33%, 22%); /* Fondo de input sutil */
+    --ring: hsl(207, 90%, 54%); /* Anillo de foco azul */
+    --radius: 0.5rem; /* Esquinas ligeramente más afiladas */
+
+    /* Colores de Gráficos - Mantenidos según solicitud previa */
+    --chart-1: hsl(120, 70%, 50%);  /* Verde */
+    --chart-2: hsl(90, 70%, 55%);   /* Verde con Amarillo (Lime Green) */
+    --chart-3: hsl(60, 100%, 55%);  /* Amarillo (Gold/Yellow) */
+    --chart-4: hsl(45, 100%, 55%);  /* Amarillo con Naranja (Brighter Gold) */
+    --chart-5: hsl(35, 100%, 60%);  /* Naranja (Bright Orange) */
+    --chart-6: hsl(15, 100%, 60%);  /* Naranja con Rojo (Orange-Red) */
+    --chart-7: hsl(0, 80%, 65%);    /* Rojo (Coral Red) */
+    --chart-8: hsl(330, 70%, 65%);  /* Rojo con Violeta (Pink/Rose) */
+    --chart-9: hsl(300, 70%, 65%);  /* Violeta (Vibrant Magenta/Violet) */
+    --chart-10: hsl(270, 70%, 70%); /* Violeta con Azul (Strong Purple) */
+    --chart-11: hsl(240, 80%, 65%); /* Azul (Bright Blue) */
+    --chart-12: hsl(180, 70%, 55%); /* Verde con Azul (Teal/Aqua) */
+    
+    /* Línea de cuadrícula para gráficos */
+    --grid-line: hsl(217, 33%, 28%); /* Gris azulado sutil para líneas de cuadrícula */
+
+    /* Variables específicas para la Sidebar - Alineadas con la nueva paleta */
+    --sidebar-background: hsl(222, 47%, 11%); /* Igual que --background */
+    --sidebar-foreground: hsl(210, 40%, 98%); /* Igual que --foreground */
+    --sidebar-primary: hsl(207, 90%, 54%); /* Igual que --primary */
+    --sidebar-primary-foreground: hsl(0, 0%, 100%); /* Igual que --primary-foreground */
+    --sidebar-accent: hsl(207, 90%, 45%); /* Azul más oscuro para hover en sidebar */
+    --sidebar-accent-foreground: hsl(0, 0%, 100%);
+    --sidebar-border: hsl(217, 33%, 22%); /* Igual que --border */
+    --sidebar-ring: hsl(207, 90%, 54%); /* Igual que --ring */
+  }
+
+  .dark {
+    /* Modo Oscuro - Asegurar consistencia con el tema por defecto */
+    --background: hsl(222, 47%, 11%);
+    --foreground: hsl(210, 40%, 98%);
+    --card: hsl(222, 47%, 14%);
+    --card-foreground: hsl(210, 40%, 98%);
+    --popover: hsl(222, 47%, 11%);
+    --popover-foreground: hsl(210, 40%, 98%);
+    --primary: hsl(207, 90%, 54%);
+    --primary-foreground: hsl(0, 0%, 100%);
+    --secondary: hsl(217, 33%, 25%);
+    --secondary-foreground: hsl(210, 40%, 90%);
+    --muted: hsl(217, 33%, 18%);
+    --muted-foreground: hsl(215, 20%, 65%);
+    --accent: hsl(207, 90%, 60%);
+    --accent-foreground: hsl(0, 0%, 100%);
+    --destructive: hsl(0, 70%, 55%);
+    --destructive-foreground: hsl(0, 0%, 98%);
+    --border: hsl(217, 33%, 22%);
+    --input: hsl(217, 33%, 22%);
+    --ring: hsl(207, 90%, 54%);
+    --radius: 0.5rem;
+
+    /* Colores de Gráficos - Mantenidos */
+    --chart-1: hsl(120, 70%, 50%);
+    --chart-2: hsl(90, 70%, 55%);
+    --chart-3: hsl(60, 100%, 55%);
+    --chart-4: hsl(45, 100%, 55%);
+    --chart-5: hsl(35, 100%, 60%);
+    --chart-6: hsl(15, 100%, 60%);
+    --chart-7: hsl(0, 80%, 65%);
+    --chart-8: hsl(330, 70%, 65%);
+    --chart-9: hsl(300, 70%, 65%);
+    --chart-10: hsl(270, 70%, 70%);
+    --chart-11: hsl(240, 80%, 65%);
+    --chart-12: hsl(180, 70%, 55%);
+    
+    --grid-line: hsl(217, 33%, 28%);
+
+    /* Variables específicas para la Sidebar - Alineadas */
+    --sidebar-background: hsl(222, 47%, 11%);
+    --sidebar-foreground: hsl(210, 40%, 98%);
+    --sidebar-primary: hsl(207, 90%, 54%);
+    --sidebar-primary-foreground: hsl(0, 0%, 100%);
+    --sidebar-accent: hsl(207, 90%, 45%);
+    --sidebar-accent-foreground: hsl(0, 0%, 100%);
+    --sidebar-border: hsl(217, 33%, 22%);
+    --sidebar-ring: hsl(207, 90%, 54%);
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif; /* Asegura que GeistSans se aplique */
+  }
+}
